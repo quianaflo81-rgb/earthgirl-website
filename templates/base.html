@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}The Earth Girl Essentials{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="nav-logo">The Earth Girl Essentials</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop">Shop</a></li>
+      <li><a href="/experiences">Experiences</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2026 The Earth Girl Essentials &nbsp;·&nbsp; Same Soul. New Intention.</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/theearthgirlessentials/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/TheEarthGirlEssentials" target="_blank">Facebook</a>
+    </div>
+  </footer>
+
+</body>
+</html>

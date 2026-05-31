@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Shop — The Earth Girl Essentials{% endblock %}
+
+{% block content %}
+
+<div style="padding-top: 7rem;"></div>
+
+<section>
+  <h2 class="section-title">The Collection</h2>
+  <div class="section-rule"></div>
+  <p class="section-intro">Each piece is chosen and crafted with intention. To order, reach out directly.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/crystals/crystals-layout.jpg') }}" alt="Crystals and Jewelry Layout" />
+      <div class="card-body">
+        <h3>Crystals</h3>
+        <p>Raw and polished stones for grounding, healing, and protection.</p>
+        <a href="/contact" class="btn" style="margin-top:1rem; font-size:0.72rem;">Inquire to Order</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/crystals/jewelry.jpg') }}" alt="Handmade Jewelry" />
+      <div class="card-body">
+        <h3>Jewelry</h3>
+        <p>Wearable energy — handcrafted pieces to carry your intention.</p>
+        <a href="/contact" class="btn" style="margin-top:1rem; font-size:0.72rem;">Inquire to Order</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/shea-butter/shea-butter.jpg') }}" alt="Shea Butter" />
+      <div class="card-body">
+        <h3>Shea Butter Blends</h3>
+        <p>Handmade body care — nourish your skin with pure, natural ingredients.</p>
+        <a href="/contact" class="btn" style="margin-top:1rem; font-size:0.72rem;">Inquire to Order</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

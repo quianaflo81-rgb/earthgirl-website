@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Contact — The Earth Girl Essentials{% endblock %}
+
+{% block content %}
+
+<div style="padding-top: 7rem;"></div>
+
+<section>
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="section-rule"></div>
+
+  <div class="contact-wrap">
+    <p>
+      Ready to order, book an experience, or simply connect?
+      Reach out below and Kellie will get back to you with love.
+    </p>
+
+    <form action="mailto:theearthgirlessentials@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject (Order / Booking / General)" />
+      <textarea name="message" placeholder="Your message..."></textarea>
+      <button type="submit" class="btn" style="align-self: flex-start;">Send Message</button>
+    </form>
+
+    <div style="margin-top: 3rem; color: var(--muted); font-style: italic;">
+      <p>Or find us on:</p>
+      <div class="footer-links" style="margin-top: 0.75rem;">
+        <a href="https://www.instagram.com/theearthgirlessentials/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/TheEarthGirlEssentials" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
