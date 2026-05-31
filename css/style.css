@@ -1,16 +1,18 @@
-/* ── Fonts & Reset ── */
+/* ── Reset & Fonts ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;600&display=swap');
+
 :root {
-  --bg:        #0d0b0e;
-  --bg2:       #150f18;
-  --gold:      #c9a84c;
-  --gold-dim:  #8a6e2f;
-  --cream:     #e8dfc8;
-  --muted:     #8a7f72;
-  --border:    rgba(201,168,76,0.2);
-  --ff-title:  'Cinzel', serif;
-  --ff-body:   'Cormorant Garamond', serif;
+  --bg:       #0d0b0e;
+  --bg2:      #150f18;
+  --gold:     #c9a84c;
+  --gold-dim: #8a6e2f;
+  --cream:    #e8dfc8;
+  --muted:    #8a7f72;
+  --border:   rgba(201,168,76,0.2);
+  --ff-title: 'Cinzel', serif;
+  --ff-body:  'Cormorant Garamond', serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -35,14 +37,14 @@ a:hover { color: var(--cream); }
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 3rem;
-  background: rgba(13,11,14,0.85);
+  background: rgba(13,11,14,0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-logo {
   font-family: var(--ff-title);
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   color: var(--gold);
 }
@@ -55,7 +57,7 @@ a:hover { color: var(--cream); }
 
 .nav-links a {
   font-family: var(--ff-title);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream);
@@ -86,7 +88,7 @@ a:hover { color: var(--cream); }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(13,11,14,0.3) 0%, rgba(13,11,14,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(13,11,14,0.3) 0%, rgba(13,11,14,0.75) 100%);
 }
 
 .hero-content {
@@ -97,7 +99,7 @@ a:hover { color: var(--cream); }
 
 .hero-content h1 {
   font-family: var(--ff-title);
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
   font-weight: 400;
   letter-spacing: 0.08em;
   color: var(--gold);
@@ -113,21 +115,19 @@ a:hover { color: var(--cream); }
   letter-spacing: 0.04em;
 }
 
+/* ── Button ── */
 .btn {
   display: inline-block;
   padding: 0.85rem 2.5rem;
   border: 1px solid var(--gold);
   color: var(--gold);
   font-family: var(--ff-title);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: all 0.35s;
 }
-.btn:hover {
-  background: var(--gold);
-  color: var(--bg);
-}
+.btn:hover { background: var(--gold); color: var(--bg); }
 
 /* ── Sections ── */
 section { padding: 6rem 2rem; }
@@ -158,7 +158,7 @@ section { padding: 6rem 2rem; }
   font-style: italic;
 }
 
-/* ── Product Cards ── */
+/* ── Cards ── */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -173,10 +173,7 @@ section { padding: 6rem 2rem; }
   overflow: hidden;
   transition: transform 0.3s, border-color 0.3s;
 }
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold-dim);
-}
+.card:hover { transform: translateY(-4px); border-color: var(--gold-dim); }
 
 .card img {
   width: 100%;
@@ -187,9 +184,7 @@ section { padding: 6rem 2rem; }
 }
 .card:hover img { opacity: 1; }
 
-.card-body {
-  padding: 1.5rem;
-}
+.card-body { padding: 1.5rem; }
 
 .card-body h3 {
   font-family: var(--ff-title);
@@ -199,11 +194,7 @@ section { padding: 6rem 2rem; }
   margin-bottom: 0.5rem;
 }
 
-.card-body p {
-  font-size: 1rem;
-  color: var(--muted);
-  font-style: italic;
-}
+.card-body p { font-size: 1rem; color: var(--muted); font-style: italic; }
 
 /* ── About ── */
 .about-wrap {
@@ -231,10 +222,7 @@ section { padding: 6rem 2rem; }
   margin-bottom: 1.5rem;
 }
 
-.about-text p {
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
+.about-text p { color: var(--muted); margin-bottom: 1rem; }
 
 .about-text .signature {
   font-family: var(--ff-title);
@@ -244,32 +232,42 @@ section { padding: 6rem 2rem; }
   margin-top: 1.5rem;
 }
 
-/* ── Contact ── */
-.contact-wrap {
-  max-width: 600px;
+/* ── Contact / Social ── */
+.social-wrap {
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 
-.contact-wrap p { color: var(--muted); margin-bottom: 2rem; font-style: italic; }
+.social-wrap p { color: var(--muted); font-style: italic; margin-bottom: 2.5rem; }
 
-form { display: flex; flex-direction: column; gap: 1.25rem; text-align: left; }
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
 
-form input, form textarea {
-  background: var(--bg2);
+.social-btn {
+  display: inline-block;
+  width: 280px;
+  padding: 1rem 2rem;
   border: 1px solid var(--border);
   color: var(--cream);
-  padding: 0.85rem 1.25rem;
-  font-family: var(--ff-body);
-  font-size: 1rem;
-  width: 100%;
-  transition: border-color 0.3s;
+  font-family: var(--ff-title);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.35s;
 }
-form input:focus, form textarea:focus {
-  outline: none;
-  border-color: var(--gold-dim);
+.social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── Page Header (non-hero pages) ── */
+.page-header {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
 }
-form textarea { min-height: 140px; resize: vertical; }
 
 /* ── Footer ── */
 footer {
@@ -280,11 +278,17 @@ footer {
   font-size: 0.95rem;
   font-style: italic;
 }
-.footer-links { margin-top: 0.75rem; display: flex; justify-content: center; gap: 2rem; }
+
+.footer-links {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .navbar { padding: 1rem 1.5rem; }
-  .nav-links { gap: 1.5rem; }
+  .nav-links { gap: 1.25rem; }
   .about-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
 }
