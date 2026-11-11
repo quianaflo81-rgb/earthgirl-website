@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}The Earth Girl Essentials — Same Soul. New Intention.{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="hero">
+  <img src="{{ url_for('static', filename='images/hero/hero.jpg') }}" alt="Kellie Moon Buddah" class="hero-img" />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>The Earth Girl Essentials</h1>
+    <p>Same Soul. New Intention.</p>
+    <a href="/shop" class="btn">Explore the Collection</a>
+  </div>
+</section>
+
+<!-- Offerings Preview -->
+<section style="background: var(--bg2);">
+  <h2 class="section-title">What We Offer</h2>
+  <div class="section-rule"></div>
+  <p class="section-intro">Crystals. Jewelry. Shea Butter. Sound Healing. Tools for your highest good.</p>
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/crystals/crystals-layout.jpg') }}" alt="Crystals and Jewelry" />
+      <div class="card-body">
+        <h3>Crystals & Jewelry</h3>
+        <p>Handpicked stones and wearable art to align your energy.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/shea-butter/shea-butter.jpg') }}" alt="Shea Butter" />
+      <div class="card-body">
+        <h3>Shea Butter Blends</h3>
+        <p>Handmade body care crafted with intention and natural ingredients.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/experiences/sound-bath.jpg') }}" alt="Sound Bath Experience" />
+      <div class="card-body">
+        <h3>Sound Bath Experiences</h3>
+        <p>Grounding and healing journeys guided by Kellie Moon Buddah.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Tagline Banner -->
+<section style="text-align:center; padding: 5rem 2rem;">
+  <h2 class="section-title" style="font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; font-weight: 300;">
+    "Tools to cultivate your peace, your healing, and your highest good."
+  </h2>
+  <div class="section-rule"></div>
+  <a href="/about" class="btn">Meet Kellie Moon Buddah</a>
+</section>
+
+{% endblock %}
